@@ -17,7 +17,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 app.use('/api/admin', require('./routes/adminRoutes'));
-
+app.get('/', (req, res) => {
+    res.send('Hello World! Not Found');
+})
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
 })
