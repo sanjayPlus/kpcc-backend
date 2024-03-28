@@ -17,9 +17,9 @@ const uploads = multer({ storage: storage }).single('file');
 
 router.post('/login', adminController.login);
 
-router.get('/get-bearers', adminAuth, adminController.getBearers);
-router.get('/get-blogs', adminAuth, adminController.getBlogs);
-router.get('/get-organizations', adminAuth, adminController.getOrganizations);
+router.get('/get-bearers',adminController.getBearers);
+router.get('/get-blogs',adminController.getBlogs);
+router.get('/get-organizations',adminController.getOrganizations);
 
 
 router.post('/add-bearers', uploads,adminAuth,adminController.addBearers);
