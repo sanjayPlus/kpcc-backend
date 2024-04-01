@@ -22,6 +22,13 @@ const login = async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 }
+const Protected = async (req, res) => {
+    try {
+        res.status(200).json({ msg: "Protected route" });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+}
 const addBearers = async(req, res) => {
     try {
             const { name, category, postion, phone, instagram, facebook, youtube, email, address, description, link, indexNo } = req.body;
@@ -39,7 +46,7 @@ const addBearers = async(req, res) => {
                 description,
                 link,
                 indexNo,
-                image: `${process.env.DOMAIN}/uploads/${imObj.filename}`
+                image: `${process.env.DOMAIN}/public/bearersImage/${imObj.filename}`
             })
             await bearers.save();
             res.status(200).json({ bearers });
@@ -62,9 +69,13 @@ const getBearers = async(req, res) => {
 
 const deleteBearers = async(req, res) => {
     try {
-        const { id } = req.body;
-        const bearers = await Bearers.findByIdAndDelete(id);
-        res.status(200).json({ bearers });
+        const { id } = req.params;
+        const bearers = await Bearers.findById(id);
+        if(!bearers) {
+            return res.status(404).send('Bearers not found');
+        }
+        await Bearers.deleteOne({ _id: id });
+        res.status(200).json({ "message": "Bearers deleted successfully", bearers  });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
@@ -72,12 +83,12 @@ const deleteBearers = async(req, res) => {
 
 const addBlogs = async(req, res) => {
     try {
-        const { title, description, image, author, category, link, date, slug } = req.body;
+        const { title, description,  author, category, link, date, slug } = req.body;
         const imObj = req.file;
         const blog = new Blog({
             title,
             description,
-            image: `${process.env.DOMAIN}/uploads/${imObj.filename}`,
+            image: `${process.env.DOMAIN}/public/blogImage/${imObj.filename}`,
             author,
             category,
             link,
@@ -105,7 +116,7 @@ const getBlogs = async(req, res) => {
 
 const deleteBlogs = async(req, res) => {
     try {
-        const { id } = req.body;
+        const { id } = req.params;
         const blog = await Blog.findByIdAndDelete(id);
         res.status(200).json({ blog });
     } catch (error) {
@@ -130,7 +141,7 @@ const addOrganizations = async(req, res) => {
             description,
             link,
             indexNo,
-            image: `${process.env.DOMAIN}/uploads/${imObj.filename}`
+            image: `${process.env.DOMAIN}/public/organizationsImage/${imObj.filename}`
         })
         await organizations.save();
         res.status(200).json({ organizations });
@@ -153,7 +164,7 @@ const getOrganizations = async(req, res) => {
 }
 const deleteOrganizations = async(req, res) => {
     try {
-        const { id } = req.body;
+        const { id } = req.params;
         const organizations = await Organization.findByIdAndDelete(id);
         res.status(200).json({ organizations });
     } catch (error) {
@@ -163,6 +174,7 @@ const deleteOrganizations = async(req, res) => {
 
 module.exports = { 
     login,
+    Protected,
     addBearers,
     getBearers,
     deleteBearers,
