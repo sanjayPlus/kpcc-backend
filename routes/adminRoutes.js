@@ -43,7 +43,7 @@ const BlogStorage = multer.diskStorage({
   
   // Configure storage engine instead of dest object.
   const BlogImage = multer({
-    storage: BearersStorage,
+    storage: BlogStorage,
     limits: {
       fileSize: 20 * 1024 * 1024, // 20MB in bytes
     },
@@ -66,7 +66,7 @@ const OrganizationStorage = multer.diskStorage({
   
   // Configure storage engine instead of dest object.
   const OrganizationImage = multer({
-    storage: BearersStorage,
+    storage: OrganizationStorage,
     limits: {
       fileSize: 20 * 1024 * 1024, // 20MB in bytes
     },
