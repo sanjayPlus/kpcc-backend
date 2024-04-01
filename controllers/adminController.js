@@ -46,7 +46,7 @@ const addBearers = async(req, res) => {
                 description,
                 link,
                 indexNo,
-                image: `${process.env.DOMAIN}/public/bearersImage/${imObj.filename}`
+                image: `${process.env.DOMAIN}/bearersImage/${imObj.filename}`
             })
             await bearers.save();
             res.status(200).json({ bearers });
@@ -88,7 +88,7 @@ const addBlogs = async(req, res) => {
         const blog = new Blog({
             title,
             description,
-            image: `${process.env.DOMAIN}/public/blogImage/${imObj.filename}`,
+            image: `${process.env.DOMAIN}/blogImage/${imObj.filename}`,
             author,
             category,
             link,
@@ -141,7 +141,7 @@ const addOrganizations = async(req, res) => {
             description,
             link,
             indexNo,
-            image: `${process.env.DOMAIN}/public/organizationsImage/${imObj.filename}`
+            image: `${process.env.DOMAIN}/organizationsImage/${imObj.filename}`
         })
         await organizations.save();
         res.status(200).json({ organizations });
