@@ -75,10 +75,10 @@ const OrganizationStorage = multer.diskStorage({
 
 router.post('/login', adminController.login);
 
-router.get('/get-bearers', adminAuth, adminController.getBearers);
-router.get('/get-blogs', adminAuth, adminController.getBlogs);
-router.get('/get-organizations', adminAuth, adminController.getOrganizations);
-router.get('/protected', adminAuth, adminController.Protected);
+router.get('/get-bearers', adminController.getBearers);
+router.get('/get-blogs', adminController.getBlogs);
+router.get('/get-organizations', adminController.getOrganizations);
+router.get('/protected', adminController.Protected);
 
 
 router.post('/add-bearers', BearersImage.single('image'),adminAuth,adminController.addBearers);
