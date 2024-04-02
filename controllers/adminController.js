@@ -60,7 +60,7 @@ const getBearers = async(req, res) => {
         const {category} =  req.query;
         let query = {};
         if(category) query = {category: category};
-        const bearers = await Bearers.find(query);
+        const bearers = await Bearers.find(query).sort({ _id: -1 });
         res.status(200).json({ bearers });
     } catch (error) {
         res.status(500).json({ error: error.message });
@@ -107,7 +107,7 @@ const getBlogs = async(req, res) => {
         const {category} =  req.query;
         let query = {};
         if(category) query = {category: category};
-        const blogs = await Blog.find(query);
+        const blogs = await Blog.find(query).sort({ _id: -1 });
         res.status(200).json({ blogs });
     } catch (error) {
         res.status(500).json({ error: error.message });
@@ -156,7 +156,7 @@ const getOrganizations = async(req, res) => {
         const {category} =  req.query;
         let query = {};
         if(category) query = {category: category};
-        const organizations = await Organization.find(query);
+        const organizations = await Organization.find(query).sort({ _id: -1 });
         res.status(200).json({ organizations });
     } catch (error) {
         res.status(500).json({ error: error.message });
