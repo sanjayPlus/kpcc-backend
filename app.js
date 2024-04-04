@@ -5,7 +5,7 @@ const port = process.env.PORT||3000 ;
 const cors = require('cors');
 const mongoose = require('mongoose');
 
-mongoose.connect(`${process.env.MONGODB_URI}/kpcc`).then(() => {
+mongoose.connect(`${process.env.MONGODB_URI}`).then(() => {
     console.log('Connected to MongoDB');
 }).catch((err) => {
     console.log(err);
