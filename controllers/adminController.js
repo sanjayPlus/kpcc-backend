@@ -96,6 +96,7 @@ const getBlogs = async(req, res) => {
         const {category} =  req.query;
         let query = {};
         if(category) query = {category: category};
+        if(slug) query = {slug: slug};
         const blogs = await Blog.find(query);
         res.status(200).json({ blogs });
     } catch (error) {
