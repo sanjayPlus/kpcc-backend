@@ -190,9 +190,14 @@ const addBlogs = async(req, res) => {
 
 const getBlogs = async(req, res) => {
     try {
-        const {category} =  req.query;
+        const {category,slug} =  req.query;
         let query = {};
-        if(category) query = {category: category};
+        if(category){
+            query["category"] = category
+        }
+        if(slug){
+            query["slug"] = slug
+        }
         const blogs = await Blog.find(query).sort({ _id: -1 });
         res.status(200).json({ blogs });
     } catch (error) {
