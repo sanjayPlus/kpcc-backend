@@ -81,6 +81,92 @@ const deleteBearers = async(req, res) => {
     }
 }
 
+const updateBearers = async (req, res) => {
+    try {
+        const bearers = await Bearers.findById(req.params.id);
+        const{ name,  postion, phone, instagram, facebook, youtube, email, address, description, link, indexNo} = req.body
+        const imObj = req.file;
+        if (name) {
+            bearers.name = name
+        }
+        
+        if (postion) {
+            bearers.postion = postion
+        }
+        if (phone) {
+            bearers.phone = phone
+        }
+        if (instagram) {
+            bearers.instagram = instagram
+        }
+        if (facebook) {
+            bearers.facebook = facebook
+        }
+        if (youtube) {
+            bearers.youtube = youtube
+        }
+        if (email) {
+            bearers.email = email
+        }
+        if (imObj) {
+            bearers.image = `${process.env.DOMAIN}/bearersImage/${imObj.filename}`
+        }
+        if(address) {
+            bearers.address = address
+        }
+        if(description) {
+            bearers.description = description
+        }
+        if(link) {
+            bearers.link = link
+        }
+        if(indexNo) {
+            bearers.indexNo = indexNo
+        }
+
+        await bearers.save();
+        res.status(200).json({ bearers });
+    }
+    catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+}
+
+const updateBlogs = async (req, res) => {
+    try {
+        const blog = await Blog.findById(req.params.id);
+        const{ title,author, category, date, slug,  description, link} = req.body
+        const imObj = req.file;
+        if (title) {
+            blog.name = name
+        }
+        if (category) {
+            blog.category = category
+        }
+        if (date) {
+            blog.date = date
+        }
+        if (slug) {
+            blog.slug = slug
+        }
+        if (description) {
+            blog.description = description
+        }
+        if (link) {
+            blog.link = link
+        }
+        if (imObj) {
+            blog.image = `${process.env.DOMAIN}/blogImage/${imObj.filename}`
+        }
+
+        await blog.save();
+        res.status(200).json({ blog });
+    }
+    catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+}
+
 const addBlogs = async(req, res) => {
     try {
         const { title, description,  author, category, link, date, slug } = req.body;
@@ -151,6 +237,59 @@ const addOrganizations = async(req, res) => {
     }
 }
 
+const updateOrganizations = async (req, res) => {
+    try {
+        const organizations = await Organization.findById(req.params.id);
+        const{ name, category, postion, phone, instagram, facebook, youtube, email, address, description, link, indexNo} = req.body
+        const imObj = req.file;
+        if (name) {
+            organizations.name = name
+        }
+        if (category) {
+            organizations.category = category
+        }
+        if (postion) {
+            organizations.postion = postion
+        }
+        if (phone) {
+            organizations.phone = phone
+        }
+        if (instagram) {
+            organizations.instagram = instagram
+        }
+        if (facebook) {
+            organizations.facebook = facebook
+        }
+        if (youtube) {
+            organizations.youtube = youtube
+        }
+        if (email) {
+            organizations.email = email
+        }
+        if (imObj) {
+            organizations.image = `${process.env.DOMAIN}/organizationsImage/${imObj.filename}`
+        }
+        if(address) {
+            organizations.address = address
+        }
+        if(description) {
+            organizations.description = description
+        }
+        if(link) {
+            organizations.link = link
+        }
+        if(indexNo) {
+            organizations.indexNo = indexNo
+        }
+
+        await organizations.save();
+        res.status(200).json({ organizations });
+    }
+    catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+}
+
 const getOrganizations = async(req, res) => {
     try {
         const {category} =  req.query;
@@ -183,5 +322,8 @@ module.exports = {
     deleteBlogs,
     addOrganizations,
     getOrganizations,
-    deleteOrganizations
+    deleteOrganizations,
+    updateBearers,
+    updateOrganizations,
+    updateBlogs,
 }

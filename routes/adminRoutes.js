@@ -85,11 +85,13 @@ router.post('/add-bearers', BearersImage.single('image'),adminAuth,adminControll
 router.post('/add-blogs', BlogImage.single('image'),adminAuth,adminController.addBlogs);
 router.post('/add-organizations',OrganizationImage.single('image'), adminAuth,adminController.addOrganizations);
 
-// router.post('/update-bearers', adminAuth,adminController.updateBearers);
-// router.post('/update-blogs', adminAuth,adminController.updateBlogs);
+router.post('/update-organizations/:id', OrganizationImage.single('image'),adminAuth,adminController.updateOrganizations);
+router.post('/update-bearers/:id', BearersImage.single('image'),adminAuth,adminController.updateBearers);
+router.post('/update-blogs/:id', BlogImage.single('image'),adminAuth,adminAuth,adminController.updateBlogs);
 
 router.post('/delete-bearers/:id', adminAuth,adminController.deleteBearers);
 router.post('/delete-blogs/:id', adminAuth,adminController.deleteBlogs);
 router.post('/delete-organizations/:id', adminAuth,adminController.deleteOrganizations);
+
 
 module.exports = router; 
