@@ -66,7 +66,14 @@ const getBearers = async(req, res) => {
         res.status(500).json({ error: error.message });
     }
 }
-
+const getBearersById = async (req, res) => {
+    try {
+        const bearers = await Bearers.findById(req.params.id);
+        res.status(200).json(bearers);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+}
 const deleteBearers = async(req, res) => {
     try {
         const { id } = req.params;
@@ -135,14 +142,12 @@ const updateBearers = async (req, res) => {
 const updateBlogs = async (req, res) => {
     try {
         const blog = await Blog.findById(req.params.id);
-        const{ title,author, category, date, slug,  description, link} = req.body
+        const{ title,author, date, slug,  description, link} = req.body
         const imObj = req.file;
         if (title) {
-            blog.name = name
+            blog.title = title
         }
-        if (category) {
-            blog.category = category
-        }
+        
         if (date) {
             blog.date = date
         }
@@ -157,6 +162,9 @@ const updateBlogs = async (req, res) => {
         }
         if (imObj) {
             blog.image = `${process.env.DOMAIN}/blogImage/${imObj.filename}`
+        }
+        if(author) {
+            blog.author = author
         }
 
         await blog.save();
@@ -200,6 +208,14 @@ const getBlogs = async(req, res) => {
         }
         const blogs = await Blog.find(query).sort({ _id: -1 });
         res.status(200).json({ blogs });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+}
+const getBlogsById = async (req, res) => {
+    try {
+        const blog = await Blog.findById(req.params.id);
+        res.status(200).json(blog);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
@@ -306,6 +322,16 @@ const getOrganizations = async(req, res) => {
         res.status(500).json({ error: error.message });
     }
 }
+
+const getOrganizationsById = async (req, res) => {
+    try {
+        const organizations = await Organization.findById(req.params.id);
+        res.status(200).json(organizations);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+}
+
 const deleteOrganizations = async(req, res) => {
     try {
         const { id } = req.params;
@@ -331,4 +357,8 @@ module.exports = {
     updateBearers,
     updateOrganizations,
     updateBlogs,
+    getBearersById,
+    getBlogsById,
+    getOrganizationsById
+
 }

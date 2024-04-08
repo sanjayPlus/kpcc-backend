@@ -80,6 +80,10 @@ router.get('/get-blogs', adminController.getBlogs);
 router.get('/get-organizations', adminController.getOrganizations);
 router.get('/protected', adminController.Protected);
 
+router.get('/get-bearers/:id', adminController.getBearersById);
+router.get('/get-blogs/:id', adminController.getBlogsById);
+router.get('/get-organizations/:id', adminController.getOrganizationsById);
+
 
 router.post('/add-bearers', BearersImage.single('image'),adminAuth,adminController.addBearers);
 router.post('/add-blogs', BlogImage.single('image'),adminAuth,adminController.addBlogs);
