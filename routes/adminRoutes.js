@@ -79,6 +79,7 @@ router.get('/get-bearers', adminController.getBearers);
 router.get('/get-blogs', adminController.getBlogs);
 router.get('/get-organizations', adminController.getOrganizations);
 router.get('/protected', adminController.Protected);
+router.get('/app-links', adminController.getAppLinks);
 
 
 router.post('/add-bearers', BearersImage.single('image'),adminAuth,adminController.addBearers);

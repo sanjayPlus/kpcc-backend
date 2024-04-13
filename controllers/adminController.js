@@ -4,6 +4,7 @@ const Admin = require('../models/Admin');
 const Bearers = require('../models/Bearers');
 const Blog = require('../models/Blog');
 const Organization = require('../models/Organization');
+const { appLinks } = require('../contants/appLinks');
 const jwtSecret = process.env.JWT_SECRET;
 const login = async (req, res) => {
     try {
@@ -177,6 +178,13 @@ const deleteOrganizations = async(req, res) => {
     }
 }
 
+const getAppLinks = async(req, res) => {
+    try {
+            res.status(200).json(appLinks);
+    } catch (error) {
+        res.status(500).json({ error: error});
+    }
+}
 module.exports = { 
     login,
     Protected,
@@ -188,5 +196,6 @@ module.exports = {
     deleteBlogs,
     addOrganizations,
     getOrganizations,
-    deleteOrganizations
+    deleteOrganizations,
+    getAppLinks
 }
