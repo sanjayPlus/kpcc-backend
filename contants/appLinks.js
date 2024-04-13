@@ -73,7 +73,7 @@ const appLinks = [
         "appstore":"https://apps.apple.com/in/app/sadhbhavana/id6479501831",
         "playstore":"",
         "apk":"",
-        "pwa":"",
+        "pwa":"https://sadhbhavana.dmckpcc.in/",
         "district":"Thrissur"
     },
     {
