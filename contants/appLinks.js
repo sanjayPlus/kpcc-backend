@@ -6,6 +6,7 @@ const appLinks = [
         "description":"",
         "appstore":"",
         "playstore":"",
+        "youtube":"",
         "apk":"",
         "pwa":"",
         "district":"kasargode"
@@ -17,6 +18,7 @@ const appLinks = [
         "description":"",
         "appstore":"",
         "playstore":"",
+        "youtube":"",
         "apk":"",
         "pwa":"",
         "district":"kannur"
@@ -28,6 +30,7 @@ const appLinks = [
         "description":"",
         "appstore":"",
         "playstore":"",
+        "youtube":"",
         "apk":"",
         "pwa":"",
         "district":"Wayanad"
@@ -39,6 +42,7 @@ const appLinks = [
         "description":"",
         "appstore":"",
         "playstore":"https://play.google.com/store/apps/details?id=com.plusitbusinesspark.dcckozhikode",
+        "youtube":"",
         "apk":"",
         "pwa":"",
         "district":"Kozhikode"
@@ -50,6 +54,7 @@ const appLinks = [
         "description":"",
         "appstore":"",
         "playstore":"https://play.google.com/store/apps/details?id=com.plusitbusinesspark.dccmalappuram",
+        "youtube":"",
         "apk":"",
         "pwa":"",
         "district":"Malappuram"
@@ -61,6 +66,7 @@ const appLinks = [
         "description":"",
         "appstore":"",
         "playstore":"",
+        "youtube":"",
         "apk":"",
         "pwa":"",
         "district":"Palakkad"
@@ -72,6 +78,7 @@ const appLinks = [
         "description":"",
         "appstore":"https://apps.apple.com/in/app/sadhbhavana/id6479501831",
         "playstore":"",
+        "youtube":"",
         "apk":"",
         "pwa":"https://sadhbhavana.dmckpcc.in/",
         "district":"Thrissur"
@@ -82,7 +89,8 @@ const appLinks = [
         "image": "https://i.postimg.cc/MT8TmFB0/Swadheshi.png",
         "description":"",
         "appstore":"",
-        "playstore":"",
+        "playstore":"https://play.google.com/store/apps/details?id=com.plusitbusinesspark.dccernakulam",
+        "youtube":"",
         "apk":"",
         "pwa":"",
         "district":"Ernakulam"
@@ -93,7 +101,8 @@ const appLinks = [
         "image": "https://i.postimg.cc/HkqsTh6G/Smaragni.jpg",
         "description":"",
         "appstore":"",
-        "playstore":"",
+        "playstore":"https://play.google.com/store/apps/details?id=com.plusitbusinesspark.dccidukki",
+        "youtube":"",
         "apk":"",
         "pwa":"",
         "district":"Idukki"
@@ -104,7 +113,8 @@ const appLinks = [
         "image": "https://i.postimg.cc/Wp5Nd35w/Sabarmathi.png",
         "description":"",
         "appstore":"",
-        "playstore":"",
+        "playstore":"https://play.google.com/store/apps/details?id=com.plusitbusinesspark.dcckottayam",
+        "youtube":"",
         "apk":"",
         "pwa":"",
         "district":"Kottayam"
@@ -116,6 +126,7 @@ const appLinks = [
         "description":"",
         "appstore":"",
         "playstore":"https://play.google.com/store/apps/details?id=com.plusitbusinesspark.dccalappuzha",
+        "youtube":"",
         "apk":"",
         "pwa":"",
         "district":"Alappuzha"
@@ -127,6 +138,7 @@ const appLinks = [
         "description":"",
         "appstore":"",
         "playstore":"https://play.google.com/store/apps/details?id=com.plusitbusinesspark.dccpathanamthitta",
+        "youtube":"",
         "apk":"",
         "pwa":"",
         "district":"Pathanamthitta"
@@ -137,7 +149,8 @@ const appLinks = [
         "image": "https://i.postimg.cc/YCJVVfjC/Charkha.jpg",
         "description":"",
         "appstore":"",
-        "playstore":"",
+        "playstore":"https://play.google.com/store/apps/details?id=com.plusitbusinesspark.dcckollam",
+        "youtube":"",
         "apk":"",
         "pwa":"",
         "district":"Kollam"
@@ -148,7 +161,8 @@ const appLinks = [
         "image": "https://i.postimg.cc/rskqk2mz/Vademataram.jpg",
         "description":"",
         "appstore":"https://apps.apple.com/in/app/vande-mataram/id6482974454",
-        "playstore":"",
+        "playstore":"https://play.google.com/store/apps/details?id=com.plusitbusinesspark.dccthiruvanathapuram",
+        "youtube":"",
         "apk":"",
         "pwa":"",
         "district":"Thiruvananthapuram"
