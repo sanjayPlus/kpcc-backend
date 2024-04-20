@@ -64,7 +64,7 @@ const appLinks = [
         "name": "Nethaji",
         "image": "https://i.postimg.cc/X7gwG9TD/Nethaji-app.png",
         "description":"",
-        "appstore":"",
+        "appstore":"https://apps.apple.com/in/app/netaji/id6484161192",
         "playstore":"",
         "youtube":"",
         "apk":"",
