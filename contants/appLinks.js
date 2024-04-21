@@ -77,7 +77,7 @@ const appLinks = [
         "image": "https://i.postimg.cc/GhzyhdyW/Sadhbhavana.png",
         "description":"",
         "appstore":"https://apps.apple.com/in/app/sadhbhavana/id6479501831",
-        "playstore":"",
+        "playstore":"https://play.google.com/store/apps/details?id=com.plusitbusinesspark.dcctcr",
         "youtube":"",
         "apk":"",
         "pwa":"https://sadhbhavana.dmckpcc.in/",
