@@ -9,7 +9,7 @@ const appLinks = [
         "youtube":"",
         "apk":"",
         "pwa":"",
-        "district":"kasargode"
+        "district":"kasargod"
     },
     {
         "id": 2,
@@ -32,7 +32,7 @@ const appLinks = [
         "playstore":"",
         "youtube":"",
         "apk":"",
-        "pwa":"",
+        "pwa":"https://azad.dmckpcc.in",
         "district":"Wayanad"
     },
     {
@@ -44,7 +44,7 @@ const appLinks = [
         "playstore":"https://play.google.com/store/apps/details?id=com.plusitbusinesspark.dcckozhikode",
         "youtube":"",
         "apk":"",
-        "pwa":"",
+        "pwa":"https://mahatma.dmckpcc.in",
         "district":"Kozhikode"
     },
     {
@@ -80,7 +80,7 @@ const appLinks = [
         "playstore":"https://play.google.com/store/apps/details?id=com.plusitbusinesspark.dcctcr",
         "youtube":"",
         "apk":"",
-        "pwa":"https://sadhbhavana.dmckpcc.in/",
+        "pwa":"https://sadhbhavana.dmckpcc.in",
         "district":"Thrissur"
     },
     {
@@ -164,7 +164,7 @@ const appLinks = [
         "playstore":"https://play.google.com/store/apps/details?id=com.plusitbusinesspark.dccthiruvanathapuram",
         "youtube":"",
         "apk":"",
-        "pwa":"",
+        "pwa":"https://vande-mataram.dmckpcc.in",
         "district":"Thiruvananthapuram"
     }
 ]
