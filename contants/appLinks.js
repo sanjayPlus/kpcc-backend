@@ -67,7 +67,7 @@ const appLinks = [
         "appstore":"https://apps.apple.com/in/app/netaji/id6484161192",
         "playstore":"",
         "youtube":"",
-        "apk":"",
+        "apk":"https://drive.google.com/file/d/1uBQnlkjCPLPJNA7f5XfVcQtp7dUJLYpx/view?usp=sharing",
         "pwa":"",
         "district":"Palakkad"
     },
