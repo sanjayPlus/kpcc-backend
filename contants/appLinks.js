@@ -40,7 +40,7 @@ const appLinks = [
         "name": "Mahatma",
         "image": "https://i.postimg.cc/B6ymz2qC/Mahatma-App.jpg",
         "description":"",
-        "appstore":"",
+        "appstore":"https://apps.apple.com/in/app/mahatma/id6484505644",
         "playstore":"https://play.google.com/store/apps/details?id=com.plusitbusinesspark.dcckozhikode",
         "youtube":"",
         "apk":"https://drive.google.com/file/d/154O-o-TsXaBJZodBV-A376cM3oTqAn8s/view?usp=sharing",
