@@ -7,7 +7,7 @@ const appLinks = [
         "appstore":"",
         "playstore":"",
         "youtube":"",
-        "apk":"",
+        "apk":"https://drive.google.com/file/d/1YER6Ji0WcBamFJskGjs_ENu6HBjubThj/view?usp=sharing",
         "pwa":"",
         "district":"kasargod"
     },
@@ -19,7 +19,7 @@ const appLinks = [
         "appstore":"",
         "playstore":"",
         "youtube":"",
-        "apk":"",
+        "apk":"https://drive.google.com/file/d/1FOuXcz0paHABfbdorKMktlW8gWVZo3id/view?usp=sharing",
         "pwa":"",
         "district":"kannur"
     },
@@ -31,7 +31,7 @@ const appLinks = [
         "appstore":"",
         "playstore":"",
         "youtube":"",
-        "apk":"",
+        "apk":"https://drive.google.com/file/d/1jtpTxAH3QJo934AxE_kAJLjw1udLAW-U/view?usp=sharing",
         "pwa":"https://azad.dmckpcc.in",
         "district":"Wayanad"
     },
@@ -43,7 +43,7 @@ const appLinks = [
         "appstore":"",
         "playstore":"https://play.google.com/store/apps/details?id=com.plusitbusinesspark.dcckozhikode",
         "youtube":"",
-        "apk":"",
+        "apk":"https://drive.google.com/file/d/154O-o-TsXaBJZodBV-A376cM3oTqAn8s/view?usp=sharing",
         "pwa":"https://mahatma.dmckpcc.in",
         "district":"Kozhikode"
     },
@@ -55,7 +55,7 @@ const appLinks = [
         "appstore":"",
         "playstore":"https://play.google.com/store/apps/details?id=com.plusitbusinesspark.dccmalappuram",
         "youtube":"",
-        "apk":"",
+        "apk":"https://drive.google.com/file/d/1sqLG9ede55Mzv-_uyTc47DLJ6wad6IV4/view?usp=sharing",
         "pwa":"",
         "district":"Malappuram"
     },
@@ -79,7 +79,7 @@ const appLinks = [
         "appstore":"https://apps.apple.com/in/app/sadhbhavana/id6479501831",
         "playstore":"https://play.google.com/store/apps/details?id=com.plusitbusinesspark.dcctcr",
         "youtube":"",
-        "apk":"",
+        "apk":"https://drive.google.com/file/d/1w-nJ89lNxJLFaz3zj2y4zcJFIBJaqMhA/view?usp=sharing",
         "pwa":"https://sadhbhavana.dmckpcc.in",
         "district":"Thrissur"
     },
@@ -91,7 +91,7 @@ const appLinks = [
         "appstore":"",
         "playstore":"https://play.google.com/store/apps/details?id=com.plusitbusinesspark.dccernakulam",
         "youtube":"",
-        "apk":"",
+        "apk":"https://drive.google.com/file/d/1M3DxLaazk5uPhdyscrVH47M4nNs1U_qW/view?usp=sharing",
         "pwa":"",
         "district":"Ernakulam"
     },
@@ -163,7 +163,7 @@ const appLinks = [
         "appstore":"https://apps.apple.com/in/app/vande-mataram/id6482974454",
         "playstore":"https://play.google.com/store/apps/details?id=com.plusitbusinesspark.dccthiruvanathapuram",
         "youtube":"",
-        "apk":"",
+        "apk":"https://drive.google.com/file/d/1GFT3gk6UtblBeK3rYgiq5EnBNzzW8tIC/view?usp=sharing",
         "pwa":"https://vande-mataram.dmckpcc.in",
         "district":"Thiruvananthapuram"
     }
